@@ -26,5 +26,6 @@ export default {
   font-style: italic;
   text-align: center;
   word-break: break-word;
+  white-space: pre-wrap;
 }
 </style>
