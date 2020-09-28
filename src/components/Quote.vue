@@ -1,7 +1,7 @@
 <template>
-  <p class="quote">
-    "{{ quote }}"
-  </p>
+  <q class="quote">
+    {{ quote }}
+  </q>
 </template>
 
 <script>

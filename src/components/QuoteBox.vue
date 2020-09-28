@@ -22,7 +22,7 @@ export default {
         background-color: rgba(155, 155, 155, 0.8);
         border-radius: 15px;
         box-shadow: 1px 1px #000;
-        padding: 50px;
+        padding: 60px;
         display: grid;
         place-items: center;
     }
