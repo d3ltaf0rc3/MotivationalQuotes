@@ -1,4 +1,6 @@
-# daily-motivator
+# DailyMotivator
+
+DailyMotivator is a web app built with Vue.js. It offers a wide selection of motivational quotes to keep you motivated!
 
 ## Project setup
 ```
@@ -19,6 +21,3 @@ npm run build
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
