@@ -21,7 +21,7 @@ export default {
         width: 60vw;
         background-color: rgba(155, 155, 155, 0.8);
         border-radius: 15px;
-        box-shadow: 1px 1px #000;
+        box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);
         padding: 60px;
         display: grid;
         place-items: center;
