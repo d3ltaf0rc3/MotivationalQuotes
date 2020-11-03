@@ -27,5 +27,6 @@ export default {
   text-align: center;
   word-break: break-word;
   white-space: pre-wrap;
+  line-height: 1.4;
 }
 </style>
