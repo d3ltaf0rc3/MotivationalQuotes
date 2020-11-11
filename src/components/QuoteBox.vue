@@ -1,27 +1,31 @@
 <template>
   <div class="container">
-    <q class="quote">
-      {{ quote }}
-    </q>
-    <span v-on:click="getNewQuote()" role="button"><i class="fas fa-redo"></i>Get another one!</span>
+    <Quote v-bind:displayButton="displayButton" v-bind:quote="this.displayedQuote" />
+    <span v-if="displayButton" v-on:click="getNewQuote()" role="button"
+      ><i class="fas fa-redo"></i>Get another one!</span
+    >
   </div>
 </template>
 
 <script>
+import Quote from "./Quote";
 import quotes from "../assets/quotes.json";
 
 export default {
-  name: "QuoteBox",
-  methods: {
-    getNewQuote() {
-      this.quote = quotes[parseInt(Math.random() * (quotes.length - 0) + 0)];
-    }
+  components: {
+    Quote,
   },
   data() {
     return {
-      quote: quotes[parseInt(Math.random() * (quotes.length - 0) + 0)],
-    };
+      displayedQuote: this.quote
+    }
   },
+  methods: {
+    getNewQuote() {
+      this.displayedQuote = quotes[parseInt(Math.random() * (quotes.length - 0) + 0)];
+    },
+  },
+  props: ["displayButton", "quote"],
 };
 </script>
 
@@ -43,18 +47,6 @@ export default {
 
 i {
   margin-right: 5px;
-}
-
-.quote {
-  align-self: flex-end;
-  color: white;
-  font-size: 48px;
-  font-family: "Montserrat", sans-serif;
-  font-style: italic;
-  text-align: center;
-  word-break: break-word;
-  white-space: pre-wrap;
-  line-height: 1.4;
 }
 
 span {

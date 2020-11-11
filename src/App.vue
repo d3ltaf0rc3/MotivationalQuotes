@@ -4,12 +4,13 @@
       <router-link to="/">Home</router-link>
       <router-link to="/all">See all quotes</router-link>
     </div>
-    <router-view/>
+    <router-view />
+    <img class="background" src="./assets/background.jpg" alt="background" />
   </div>
 </template>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 * {
   box-sizing: border-box;
@@ -18,12 +19,12 @@
   font-family: "Roboto", sans-serif;
 }
 
-#app {
-  background-image: url("./assets/background.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
+.background {
   height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+  top: 0;
 }
 
 #nav {
