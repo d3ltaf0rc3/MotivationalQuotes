@@ -1,7 +1,6 @@
 <template>
   <div class="grid-container">
     <QuoteBox
-      class="grid-item"
       v-bind:displayButton="false"
       v-bind:quote="quote"
       v-for="quote in quotes"
@@ -28,12 +27,9 @@ export default {
 
 <style scoped>
 .grid-container {
+  padding: 50px 100px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding-bottom: 50px;
-}
-
-.grid-item {
-  width: 800px;
+  gap: 80px;
 }
 </style>

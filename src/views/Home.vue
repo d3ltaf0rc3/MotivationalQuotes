@@ -1,5 +1,7 @@
 <template>
-  <QuoteBox v-bind:quote="this.quote" v-bind:displayButton="true" />
+  <div class="container">
+    <QuoteBox class="quote-container" v-bind:quote="this.quote" v-bind:displayButton="true" />
+  </div>
 </template>
 
 <script>
@@ -17,3 +19,16 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.container {
+  display: grid;
+  place-items: center;
+  height: calc(100vh - 129px);
+}
+
+.quote-container {
+  width: 60%;
+  height: 65%;
+}
+</style>
